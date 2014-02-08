@@ -1,10 +1,10 @@
+[![Gem Version](https://badge.fury.io/rb/ga-measurements.png)](http://badge.fury.io/rb/ga-measurements)
+
 Overview
 =========
 
 A (very) simple wrapper for Google Analytics' new Universal Measurement API. Send
 events to GA server side.
-
-
 
 Usage
 =====
@@ -52,7 +52,7 @@ Hit Types
 
 To tie backend events to JavaScript-originated events, you'll need to get the
 `clientId` from the Analytics JavaScript (shamelessly lifted from
-http://stackoverflow.com/a/14281426/1251141):
+http://stackoverflow.com/a/14281426/1251141) so you can pass it into during instantiation:
 
 ```javascript
 ga(function(tracker) {
@@ -65,3 +65,29 @@ Alternately, you can specify your own UUID when initializing the Analytics Javas
 ```javascript
 ga('create', 'UA-XXXXX-Y', {'clientId': 'your_client_id'});
 ```
+
+License
+=======
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Carnes Media LLC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
