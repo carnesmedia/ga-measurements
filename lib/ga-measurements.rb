@@ -24,5 +24,7 @@ class GAMeasurements
     payload = params.merge({t: type, tid: property_id, cid: client_id, v: API_VERSION})
 
     response = self.class.post(API_ENDPOINT, { body: payload })
+
+    return response.code
   end
 end
