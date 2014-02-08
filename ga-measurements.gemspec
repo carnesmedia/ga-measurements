@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'ga-measurements'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2014-02-07'
   s.summary     = "A simple wrapper for Google Analytics' Universal Measurement API"
   s.description = "A simple wrapper for Google Analytics' Universal Measurement API"

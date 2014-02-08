@@ -4,7 +4,7 @@ class GAMeasurements
 
   include HTTParty
 
-  TYPES = %w(pageview event item transaction socia exception timing appview)
+  TYPES = %w(pageview event item transaction social exception timing appview)
   API_VERSION = 1
   API_ENDPOINT = "https://ssl.google-analytics.com/collect"
 
