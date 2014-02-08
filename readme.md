@@ -46,3 +46,22 @@ Hit Types
 * `exception`
 * `timing`
 * `appview`
+
+`_ga` and user UUID
+-------------------
+
+To tie backend events to JavaScript-originated events, you'll need to get the
+`clientId` from the Analytics JavaScript (shamelessly lifted from
+http://stackoverflow.com/a/14281426/1251141):
+
+```javascript
+ga(function(tracker) {
+  var clientId = tracker.get('clientId');
+});
+```
+
+Alternately, you can specify your own UUID when initializing the Analytics Javascript:
+
+```javascript
+ga('create', 'UA-XXXXX-Y', {'clientId': 'your_client_id'});
+```
