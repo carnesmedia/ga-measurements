@@ -65,6 +65,15 @@ Alternately, you can specify your own UUID when initializing the Analytics Javas
 ```javascript
 ga('create', 'UA-XXXXX-Y', {'clientId': 'your_client_id'});
 ```
+The `_ga` cookie stores the clientId as well (although it's not a UUID as specified in the
+documentation; it's unclear if this will change in the future). GAMeasurements will parse it out of the cookie for you:
+
+```ruby
+ga = GAMeasurements.new('UA-XXXX-Y')
+ga.set_client_id_from_cookie(cookies['_ga'])
+# Send some events
+```
+
 
 License
 =======

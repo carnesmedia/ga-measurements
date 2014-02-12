@@ -1,7 +1,7 @@
-class GAMeasurements
-  require 'httparty'
-  require 'uuid'
+require 'httparty'
+require 'uuid'
 
+class GAMeasurements
   include HTTParty
 
   TYPES = %w(pageview event item transaction social exception timing appview)
@@ -12,6 +12,11 @@ class GAMeasurements
 
   def initialize(property_id, client_id = UUID.new.generate)
     @property_id, @client_id = property_id, client_id
+  end
+
+  def set_client_id_from_cookie(cookie)
+    # ref https://plus.google.com/110147996971766876369/posts/Mz1ksPoBGHx
+    @client_id = cookie.to_s.split('.').last(2).join('.')
   end
 
   TYPES.each do |type|
